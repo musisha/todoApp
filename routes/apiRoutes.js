@@ -15,8 +15,16 @@ router.get('/search/:name', apiControllers.searchTask);
 router.put('/update-task/:names/:name/:subtask/:isComplete', apiControllers.updateTask);
 
 //add subtaks
-router.put('/add-sub-tasks/names/name/isCompleted', apiControllers.AddSubTask);
+router.post('/subtasks/names/name/isCompleted', apiControllers.AddSubTask);
 
+//mark task if completed
+router.patch('/isComplete/:task/:subtask/:isComplete',apiControllers.marksComplete);
+
+//delete tasks
+router.delete('/delete/:name',apiControllers.deleteTask);
+
+//delete sub tasks
+router.delete('/delete-subtask/:task/:subtask',apiControllers.deleteSubTask);
 
 
 
