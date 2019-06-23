@@ -12,8 +12,9 @@ router.post('/add/:name/:subtasks/:isCompleted', apiControllers.postAddTask);
 router.get('/search/:name', apiControllers.searchTask);
 
 //update task
-router.put('/update-task', apiControllers.updateTask);
+router.put('/update-task/:names/:name/:subtask/:isComplete', apiControllers.updateTask);
 
+//add subtaks
 router.put('/add-sub-tasks/names/name/isCompleted', apiControllers.AddSubTask);
 
 

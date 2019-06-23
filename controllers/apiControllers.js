@@ -55,7 +55,7 @@ exports.updateTask = (req,res) => {
             } else {
                 if(req.params.names) {
                     todo.name = req.params.name;
-                    todo.subtaks = req.params.subtasks;
+                    todo.subtasks = req.params.subtasks;
                     todo.isCompleted = req.params.isCompleted;
                 }
                 todo.save((err, todo) => {
